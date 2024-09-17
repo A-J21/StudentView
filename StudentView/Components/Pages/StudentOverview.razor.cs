@@ -8,6 +8,7 @@ namespace StudentView.Components.Pages
         public List<Student> Students { get; set; } = default!;
         protected async override Task OnInitializedAsync()
         {
+            await Task.Delay(1000);
             Students = MockDataService.Students;
         }
     }

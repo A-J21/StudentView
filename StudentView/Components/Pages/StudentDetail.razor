@@ -1,0 +1,87 @@
+﻿@page "/studentdetail/{StudentId:int}"
+@rendermode InteractiveServer
+
+<section class="student-detail">
+    <h1 class="page-title">
+        Details for @Student.FirstName @Student.LastName
+
+
+    </h1>
+    <br />
+    <div class="col-12 row">
+        <div class="col-2 text-center">
+            <img src="@($"https://gillcleerenpluralsight.blob.core.windows.net/person/{Student.StudentId}.jpg")" class="img-fluid rounded-circle employee-detail-img" />
+
+        </div>
+        <div class="col-10 row">
+            <div class="col-12 col-xxl-8">
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Employee ID</label>
+                    <div class="col-sm-8">
+                        <label type="text" class="form-control-plaintext">@Student.StudentId</label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">First name</label>
+                    <div class="col-sm-8">
+                        <label type="text" readonly class="form-control-plaintext">@Student.FirstName</label>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Last name</label>
+                    <div class="col-sm-8">
+                        <label type="text" readonly class="form-control-plaintext">@Student.LastName</label>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Birthdate</label>
+                    <div class="col-sm-8">
+                        <label type="text" readonly class="form-control-plaintext">@Student.BirthDate?.ToShortDateString()</label>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Email</label>
+                    <div class="col-sm-8">
+                        <label type="text" readonly class="form-control-plaintext">@Student.Email</label>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">City</label>
+                    <div class="col-sm-8">
+                        <label type="text" readonly class="form-control-plaintext">@Student.City</label>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Gender</label>
+                    <div class="col-sm-8">
+                        <label type="text" readonly class="form-control-plaintext">@Student.Gender</label>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Joined us</label>
+                    <div class="col-sm-8">
+                        <label type="text" readonly class="form-control-plaintext">@Student.JoinedDate?.ToShortDateString()</label>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Left us</label>
+                    <div class="col-sm-8">
+                        <label type="text" readonly class="form-control-plaintext">@Student.ExitDate?.ToShortDateString()</label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+
